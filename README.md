@@ -7,3 +7,4 @@ lesson notes
 
 - [] Demo the list making tool 
 - [x] I like this item , it is checked off 
+-  <del> [x] this item is so old school. </del>
