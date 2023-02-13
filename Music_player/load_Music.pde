@@ -1,0 +1,9 @@
+minim = new Minim(this);
+  song0 = minim.loadFile("../Music/Colony - tubebackr  Royalty Free Music No Copyright Free Music Instrumental Free Download Music.mp3");
+  song1 = minim.loadFile("../Music/Cubic Z - Diamond Ortiz  Royalty Free Music - No Copyright Music  YouTube Music.mp3");
+  song2 = minim.loadFile("../Music/groove.mp3");
+  song3 = minim.loadFile("../Music/Head Candy - William Rosati  Royalty Free Music - No Copyright Music.mp3");
+  song4 = minim.loadFile("../Music/Night Rider - JIGLR.mp3");
+  song5 = minim.loadFile("../Music/Summer - Bensound  Royalty Free Music - No Copyright Music.mp3");
+  soundEffect0 = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
+  soundEffect1 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");
