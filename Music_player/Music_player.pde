@@ -14,10 +14,10 @@ AudioPlayer soundEffect0 , soundEffect1;
   //
 void setup() {
   size(300, 300);
-  
-  song.loop(0);
-  soundEffect0.loop(0)
-} //End setup
+  loadMusic();
+  song0.loop(0);
+  soundEffect0.loop(0);
+ } //End setup
 //
 void draw() {
  background(0);
@@ -25,7 +25,12 @@ void draw() {
 //
 void keyPressed() {
   //
-  if (key=='Q') song.loop(0);
+  if (key=='Q') song0.loop(0);
+  if (key=='Q') song1.loop(0);
+  if (key=='Q') song2.loop(0);
+  if (key=='Q') song3.loop(0);
+  if (key=='Q') song4.loop(0);
+  if (key=='Q') song5.loop(0);
   if (key=='Q'|| key=='Q') exit();
   if (key==CODED && key==ESC ) exit();
   //
