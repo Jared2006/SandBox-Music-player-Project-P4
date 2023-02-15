@@ -21,22 +21,21 @@ void setup() {
 //
 void draw() {
   if ( activateWindow == true ) background(0);
-} //End draw
 println ( soundEffect0.position(), soundEffect0.length() );
 println ("When does the sound stop? Indicates delay");
+} //End draw
 //
 void keyPressed() {
   //
-  if (key=='Q') song0.loop(0);
-  if (key=='Q') song1.loop(0);
-  if (key=='Q') song2.loop(0);
-  if (key=='Q') song3.loop(0);
-  if (key=='Q') song4.loop(0);
-  if (key=='Q') song5.loop(0);
-  if (key=='Q'|| key=='Q') exit();
-  if (key==CODED && key==ESC ) exit();
-  
+  soundEffect0.play();
+  soundEffect0.rewind();
+  delay (1000);
+    println( "keypressed:" , soundEffect0. length() );
   //
+  keyPressedShortCuts();
+  //
+   if (key=='Q'|| key=='Q') exit();
+  if (key==CODED && key==ESC ) exit();
   soundEffect1.play(); 
 } //End Keypress
 //
