@@ -10,7 +10,7 @@ Minim minim;
 AudioPlayer song0 , song1 , song2 , song3, song4 , song5;
 AudioPlayer soundEffect0 , soundEffect1; 
   //
-  Boolean firstMouseclick=false;
+  Boolean activateWindow=false;
   //
 void setup() {
   size(300, 300);
@@ -20,8 +20,10 @@ void setup() {
  } //End setup
 //
 void draw() {
- background(0);
+  if ( activateWindow == true ) background(0);
 } //End draw
+println ( soundEffect0.position(), soundEffect0.length() );
+println ("When does the sound stop? Indicates delay");
 //
 void keyPressed() {
   //
@@ -33,12 +35,13 @@ void keyPressed() {
   if (key=='Q') song5.loop(0);
   if (key=='Q'|| key=='Q') exit();
   if (key==CODED && key==ESC ) exit();
+  
   //
-  soundEffect1.play();
+  soundEffect1.play(); 
 } //End Keypress
 //
 void mousePressed() {
  soundEffect1.rewind ();
- if ( firstMouseclick==false ) firstMouseclick = true;
-} // End Keypress
+ if ( activateWindow==false ) activateWindow = true;
+} // End mousePressed
 //End MAIN Program
