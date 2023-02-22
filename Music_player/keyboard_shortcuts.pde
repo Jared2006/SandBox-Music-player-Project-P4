@@ -2,6 +2,7 @@ void keyPressedShortCuts() {
   //
   musicShortCuts();
   //
+} 
   void musicShortCuts() {
   if (key=='0') song0.loop(0);
   if (key=='1') song1.loop(0);

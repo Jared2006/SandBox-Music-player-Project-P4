@@ -45,5 +45,6 @@ void keyPressed() {
   void mousePressed() {
     soundEffect1.rewind ();
     if ( activateWindow==false ) activateWindow = true;
-  } // End mousePressed;
+  } // End mousePressed
+     //
   //End MAIN Program
