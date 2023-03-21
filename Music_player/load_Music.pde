@@ -1,5 +1,5 @@
- void loadMusic() { 
-  //
+ void loadMusic() {
+   //
   minim = new Minim(this);
   //
   //Concentration of Pathway + File Name
@@ -18,5 +18,6 @@
   song4 = minim.loadFile( musicPathway + NightFileName);
   song5 = minim.loadFile( musicPathway + SummerFileName);
   soundEffect0 = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
-  soundEffect1 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");
- }//End loadMusic
+  soundEffect1 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");  
+  //
+ } //End loadMusic
