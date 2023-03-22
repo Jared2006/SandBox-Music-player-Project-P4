@@ -11,13 +11,13 @@
   String HeadFileName = "Head Candy - William Rosati  Royalty Free Music - No Copyright Music.mp3";
   String NightFileName ="Night Rider - JIGLR.mp3";
   String SummerFileName ="Summer - Bensound  Royalty Free Music - No Copyright Music.mp3";
-  song0 = minim.loadFile(musicPathway + ColonyFileName);
-  song1 = minim.loadFile(musicPathway + cubicFileName);
-  song2 = minim.loadFile(musicPathway + grooveFileName);
-  song3 = minim.loadFile( musicPathway + HeadFileName );
-  song4 = minim.loadFile( musicPathway + NightFileName);
-  song5 = minim.loadFile( musicPathway + SummerFileName);
-  soundEffect0 = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
-  soundEffect1 = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");  
+  songs[0] = minim.loadFile(musicPathway + ColonyFileName);
+  songs[1] = minim.loadFile(musicPathway + cubicFileName);
+  songs[2] = minim.loadFile(musicPathway + grooveFileName);
+  songs[3] = minim.loadFile( musicPathway + HeadFileName );
+  songs[4] = minim.loadFile( musicPathway + NightFileName);
+  songs[5] = minim.loadFile( musicPathway + SummerFileName);
+  soundEffects[0] = minim.loadFile("../Sound Effects/Wood_Door_Open_and_Close_Series.mp3");
+  soundEffects[1] = minim.loadFile("../Sound Effects/The_Simplest_Sting.mp3");  
   //
  } //End loadMusic

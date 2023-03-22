@@ -1,15 +1,20 @@
 void keyPressedShortCuts() {
   //
   musicShortCuts();
+  quitButtons();
   //
-} 
-  void musicShortCuts() {
-  if (key=='0') song0.loop(0);
-  if (key=='1') song1.loop(0);
-  if (key=='2') song2.loop(0);
-  if (key=='3') song3.loop(0);
-  if (key=='4') song4.loop(0);
-  if (key=='5') song5.loop(0);
+}//End keyPressedShortCuts
+//
+void musicShortCuts() {
+  //Key Board Short Cuts for Music, use numbers
+  //Hint: notice human numbering vs. computer numbering9
+  //Note: if(key=='1')song0.loop(0); will change to array & index introduction
+  if ( key == '0' ) songs[0].loop(0);
+  if ( key == '1' ) songs[0].loop(0); //.rewind() is included in .loop()
+  if ( key == '2' ) songs[1].loop(0);
+  if ( key == '3' ) songs[2].loop(0);
+  if ( key == '4' ) songs[3].loop(0);
+  if ( key == '5' ) songs[4].loop(0);
   //
   if ( key == 'U' || key=='u' ) autoPlay();
   if ( key == 'P' || key=='p' ) playPause();
@@ -22,11 +27,10 @@ void keyPressedShortCuts() {
   if ( key == 'L' || key=='l' ) loopSong();
   if ( key == 'O' || key=='o' ) loopPlaylist(); 
   if ( key == 'W' || key=='w' ) shufflePlaylist(); 
-  if ( key == 'E' || key=='e' ) loopandShuffle(); 
+  if ( key == 'E' || key=='e' ) loopAndShuffle(); 
   }// End musicShortCuts
   //
   void quitButtons() {
-  //Quit Button Key Board Shortcuts
   if ( key == 'Q' || key == 'q' ) {
     quitButtonCode();
   }
@@ -36,67 +40,74 @@ void keyPressedShortCuts() {
 }//End quitButtons
 //
 void quitButtonCode() {
-  soundEffect1.loop(0); //only need partial file, use .play(int millis)
-  //Visual Image or Text of Goodbye
-  delay(1000); //alternate way of playing sound once
+  soundEffects[1].loop(0); 
+  delay(3000); 
   exit();
-}// End quitButtonCode
+}//End quitButtonCode
+//
 void autoPlay() {
-
 }//End AutoPlay
 //
-void playPause() 
+void playPause()
 {
-  if ( song0.isPlaying() ) {
-    song0.pause();
-  } else if ( song0.isMuted() && song0.position() >= song0.length()*4/5 ) {
-    song0.rewind();
-    song0.play();
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) { //80% of the song
+    songs[currentSong].rewind();
+    songs[currentSong].play();
   } else {
-    song0.play();
+    songs[currentSong].play(); //Interim solution
   }
-}//End AutoPlay
+}//End Play Pause
 //
-void mute() 
+void mute()
 {
- if (song0.isMuted() ){
- song0.unmute();
- } else if (song0.isMuted() && song0.position() >= song0.length()*4/5 ) {
-  song0.rewind();
-  song0.unmute();
- }else {
-   song0.mute();
- } 
+  if ( songs[currentSong].isMuted() ) {
+    songs[currentSong].unmute();
+  } else if ( songs[currentSong].isMuted() && songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+    songs[currentSong].rewind(); //one solution
+    songs[currentSong].unmute();
+    //
+  } else {
+    songs[currentSong].mute(); //simple solution, contains two ERRORS, see above
+  }
 }//End Mute
 //
-void stopSong() 
+void stopSong()
 {
- if ( song0.isPlaying() ){
-   song0.pause();
-   song0.rewind();
- } else {
-   song0.rewind();
- } 
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+    songs[currentSong].rewind();
+  } else {
+    songs[currentSong].rewind();
+  }
 }//End Stop Song
 //
 void fastForward() {
-if (song0.isPlaying() )song0.skip(1000) ;
+  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(1000); //parameter in milliseconds
 }//End Fast Forward
 //
 void fastRewind() {
- if (song0.isPlaying() )song0.skip(1000) ;
+  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(1000); //parameter in milliseconds
 }//End Fast Rewind
 //
-void nextSong() {}//End Next Song
+void nextSong() {
+}//End Next Song
 //
-void previousSong() {}//End Previous Song
+void previousSong() {
+}//End Previous Song
 //
-void loopSong() {}//End Loop Song
+void loopSong() {
+}//End Loop Song
 //
-void loopPlaylist() {}//End Loop the Playlist
+void loopPlaylist() {
+}//End Loop the Playlist
 //
-void shufflePlaylist() {}//End Shuffle the Playlist()
+void shufflePlaylist() {
+}//End Shuffle the Playlist()
 //
-void loopandShuffle() {}//End Loop And Shuffle
+void loopAndShuffle() {
+}//End Loop And Shuffle
 //
-//End key Board Short Cuts Sub Prograam
+
+//End Key Board Short Cuts Sub Program
