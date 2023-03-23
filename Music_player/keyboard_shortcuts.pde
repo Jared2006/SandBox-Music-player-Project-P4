@@ -31,6 +31,7 @@ void musicShortCuts() {
   }// End musicShortCuts
   //
   void quitButtons() {
+  //Quit Button Key Board Shortcuts
   if ( key == 'Q' || key == 'q' ) {
     quitButtonCode();
   }
@@ -40,13 +41,30 @@ void musicShortCuts() {
 }//End quitButtons
 //
 void quitButtonCode() {
-  soundEffects[1].loop(0); 
-  delay(3000); 
+  soundEffects[1].loop(0); //only need partial file, use .play(int millis)
+  //Visual Image or Text of Goodbye
+  delay(3000); //alternate way of playing sound once
   exit();
 }//End quitButtonCode
 //
+/* Note: must define a difference between auto play and loop playlist
+ */
 void autoPlay() {
+  if (autoPlayON)== false  () ) {
+    (autoPlayON) = true;
+  } else {
+    (autoPlayON) = false;
+    songs[currentSong].pause(); //enables play to continue when auto play is turned off
+    //songs[currentSong].rewind();
+  }
 }//End AutoPlay
+void autoPlayMusic() {
+  //ERROR: ArrayListOutOfBounds
+  if ( songs[currentSong].isPlaying()==false ) {
+    currentSong++;
+    songs[currentSong].play();
+  }
+}//End Auto Play Music
 //
 void playPause()
 {
@@ -55,7 +73,9 @@ void playPause()
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) { //80% of the song
     songs[currentSong].rewind();
     songs[currentSong].play();
+    //Remember, Auto Play is better b/c it plays the next song
   } else {
+    //autoPlay(), is better here
     songs[currentSong].play(); //Interim solution
   }
 }//End Play Pause
@@ -67,7 +87,6 @@ void mute()
   } else if ( songs[currentSong].isMuted() && songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
     songs[currentSong].rewind(); //one solution
     songs[currentSong].unmute();
-    //
   } else {
     songs[currentSong].mute(); //simple solution, contains two ERRORS, see above
   }
@@ -75,6 +94,9 @@ void mute()
 //
 void stopSong()
 {
+  //Based on a question: is the song playing
+  //Hint: would this fix the ERROR of the MUTE Button
+  //Note: STOP is actually afancy rewind, no ERRORS
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
     songs[currentSong].rewind();
@@ -84,17 +106,22 @@ void stopSong()
 }//End Stop Song
 //
 void fastForward() {
+  //Asks comptuer if the song is playing
   if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(1000); //parameter in milliseconds
 }//End Fast Forward
 //
 void fastRewind() {
-  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(1000); //parameter in milliseconds
+  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(-1000); //parameter in milliseconds
 }//End Fast Rewind
 //
 void nextSong() {
+  //ERROR: ArrayListOutOfBounds
+  currentSong++;
 }//End Next Song
 //
 void previousSong() {
+  //ERROR: ArrayListOutOfBounds
+  currentSong--;
 }//End Previous Song
 //
 void loopSong() {
@@ -107,6 +134,8 @@ void shufflePlaylist() {
 }//End Shuffle the Playlist()
 //
 void loopAndShuffle() {
+  //Student to finish
+  //Hint: random() and casting, see Global Variables' currentSong declaration
 }//End Loop And Shuffle
 //
 
