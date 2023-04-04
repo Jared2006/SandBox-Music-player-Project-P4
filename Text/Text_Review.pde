@@ -7,7 +7,9 @@ void setup() {
 }//End Set Up
 //
 void draw() {
-  textDraw1(); //Can be anywhere
+  textDraw1(); 
+  textDraw2();
+  textDraw3();
 }//End Draw
 //
 void keyPressed() {
