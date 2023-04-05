@@ -4,23 +4,30 @@ float textRectX2, textRectY2, textRectWidth2, textRectHeight2;
 float textRectX3, textRectY3, textRectWidth3, textRectHeight3;
 PFont font;
 color purpleInk=#2C08FF, resetWhiteInk=#FFFFFF; //Not nice for Night Mode, Blue Content
-String string1 = "School is boring.";
-String string2 = "My life is good.";
-String string3 = "Love cars.";
+String string1 = "school is boring.";
+String string2 = "life is good .";
+String string3 = "love cars.";
 //
-void allText() {
+void allText() { //VOIDs that go into MAIN PROGRAM
+  textDraw1();
+  textDraw2();
+  textDraw3();
 }//End All Text
 //
 void textSetup() { //Executed Once
   //Population, from display
-  textRectX1 = width*1/5;
+  //Must have CASE STUDY
+  textRectX1 = textRectX2 = textRectX3 = width*1/5;
+  textRectWidth1 = textRectWidth2= textRectWidth3= width*3/5;
+  textRectHeight1 = textRectHeight2 = textRectHeight3 = height*1/10;
   textRectY1 = height*1/10;
-  textRectWidth1 = width*3/5;
-  textRectHeight1 = height*1/10;
+  textRectY2 = height*8/10;
+  textRectY3 = height*5/10;
   //
+  //For visualizing rect(), variables are important
   //rect( textRectX1, textRectY1, textRectWidth1, textRectHeight1 );
-  rect( textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
-  rect( textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
+  //rect( textRectX2, textRectY2, textRectWidth2, textRectHeight2 );
+  //rect( textRectX3, textRectY3, textRectWidth3, textRectHeight3 );
   /*
   println("Start of Console");
    String[] fontList = PFont.list(); //To list all fonts available on system
