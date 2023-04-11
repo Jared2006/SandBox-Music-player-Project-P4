@@ -50,8 +50,8 @@ void quitButtonCode() {
 /* Note: must define a difference between auto play and loop playlist
  */
 void autoPlay() {
-  if (autoPlayON)== false  () ) {
-    (autoPlayON) = true;
+  if (autoPlayON) == false  () ) {
+    (autoPlayON)= true;
   } else {
     (autoPlayON) = false;
     songs[currentSong].pause(); //enables play to continue when auto play is turned off
