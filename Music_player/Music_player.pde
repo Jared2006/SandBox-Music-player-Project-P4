@@ -32,12 +32,6 @@ void setup() {
 void draw() {
   if ( activateWindow == true ) background(0);
   //
-  //Debugging the Effective Length of the Sound Effect to code a delay
-  //println ( soundEffect0.position(), soundEffect0.length() );
-  //println ("When does the sound stop? Indicates delay");
-  // Debugging a sound to shorten a file play
-  //println( soundEffect1.position(), soundEffect1.length() );
-  //
 } //End draw
 //
 void keyPressed() {

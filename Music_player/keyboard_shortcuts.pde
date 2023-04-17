@@ -17,8 +17,7 @@ void musicShortCuts() {
   //
   //Students to make these smarter
   //Separated into single songs and multiple songs
-  //
-  if ( key == 'P' || key=='p' ) playPause(); //teacher started
+  //  if ( key == 'P' || key=='p' ) playPause(); //teacher started
   //Note: for this Auto Play to Work, song must be playing
   if ( key == 'U' || key=='u' ) autoPlay(); //teacher started
   if ( key == 'M' || key=='m' ) mute(); //teacher started
@@ -62,10 +61,10 @@ void autoPlay() {
    - next song will start
    - might even start the next song at the same time as the current song
    */
-  if  autoPlayON = false; ()  ) {
-    autoPlayON = true;
+  if  (autoPlayON==false); {
+   autoPlayON==true;
   } else {
-    autoPlayON = false;
+    autoPlayON==false;
     songs[currentSong].pause(); //enables play to continue when auto play is turned off
     //songs[currentSong].rewind();
   }
