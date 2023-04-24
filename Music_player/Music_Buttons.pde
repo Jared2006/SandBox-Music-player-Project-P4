@@ -1,3 +1,9 @@
+void buttons() {
+  car();
+  yeetus();
+}
+
+
 //Global Variables
 float buttonReferentMeasure;
 float buttonSide, spaceWidth, spaceHeight;
@@ -13,9 +19,8 @@ float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
-void setup() {
+void car() {
   //Display
-  size(700, 500); //width, height
   //fullScreen(); //displayWidth, displayHeight
   //
   //Population: visual data (hint, notes will lead to FOR or WHILE Loops to populate)
@@ -115,7 +120,7 @@ void setup() {
   //
 } //End setup
 //
-void draw() {
+void yeetus() {
   //
   //Confirming Local Variable Center X & Y garbage collected from setup()
   //print("Confirming Center X:", centerX);
@@ -189,11 +194,5 @@ void draw() {
   //2-D Shapes
   //
 } //End draw
-//
-void keyPressed() {
-} //End keyPressed
-//
-void mousePressed() {
-} //End mousePressed
 //
 //End MAIN Program

@@ -22,6 +22,7 @@ Boolean activateWindow=false, autoPlayON=false;
 void setup() {
   size(300, 300);
   loadMusic();
+  buttons();
   //
   //Illustrate Garbage Collection of Local Variable
   //println("Music Pathway is", musicPathway); //local variable doesn't exit outside of void loadMusic() {}
