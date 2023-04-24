@@ -20,7 +20,7 @@ int time = 7000;
 Boolean activateWindow=false, autoPlayON=false;
 //
 void setup() {
-  size(300, 300);
+  size(800, 500);
   loadMusic();
   buttons();
   //
