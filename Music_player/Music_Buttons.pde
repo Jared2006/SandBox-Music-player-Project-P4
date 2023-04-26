@@ -2,8 +2,6 @@ void buttons() {
   car();
   yeetus();
 }
-
-
 //Global Variables
 float buttonReferentMeasure;
 float buttonSide, spaceWidth, spaceHeight;
