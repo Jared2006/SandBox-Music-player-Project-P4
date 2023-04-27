@@ -15,7 +15,9 @@ float rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B;
 float nextX1, nextY1, nextX2, nextY2, nextX3, nextY3, nextXR2, nextYR2, nextWidth;
 float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
-float loopPlaylistX, loopPlaylistY;
+float loopPlaylistWidthDiameter, loopPlaylistHeightDiameter, loopPlaylistX1, loopPlaylistY1, loopPlaylistX2, loopPlaylistY2, loopPlaylistX3, loopPlaylistY3,loopPlaylistX, loopPlaylistY;
+float loopIWidthDiameter, loopIHeightDiameter,loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3;
+
 //
 void car() {
   //Display
@@ -113,8 +115,11 @@ void car() {
   stopY = pauseY1;
   //
   buttonPositionRow = 2;
-  loopPlaylistX = pauseX1;
-  loopPlaylistY = pauseY1 + ( buttonPositionRow*buttonReferentMeasure );
+  loopPlaylistX = pauseX1 + ( buttonPositionColum*buttonReferentMeasure )*1.4;
+  loopPlaylistY = pauseY1 + ( buttonPositionColum*buttonReferentMeasure )*0.5;
+  loopPlaylistWidthDiameter = ( buttonPositionColum*buttonReferentMeasure )*0.5;
+  loopPlaylistHeightDiameter =( buttonPositionRow*buttonReferentMeasure )*0.7;  
+  //
   //
 } //End setup
 //
@@ -182,8 +187,8 @@ void yeetus() {
   //
   //Loop the Playlist (infinitely)
   //Students to Develop
-  rect( loopPlaylistX, loopPlaylistY, buttonSide, buttonSide ); //Layout
-  //ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
+ // rect( loopPlaylistX, loopPlaylistY, buttonSide, buttonSide ); //Layout
+  ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
   //ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
   //triangle( loopPlaylistX1, loopPlaylistY1, loopPlaylistX2, loopPlaylistY2, loopPlaylistX3, loopPlaylistY3 );
   //
