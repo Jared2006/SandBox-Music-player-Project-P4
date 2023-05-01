@@ -38,7 +38,7 @@ void draw() {
   //println ("When does the sound stop? Indicates delay");
   // Debugging a sound to shorten a file play
   //println( soundEffect1.position(), soundEffect1.length() );
-  println(autoPlayON, songs[currentSong].isPlaying(), currentSong, songs[currentSong].position(), songs[currentSong].length());
+  //println(autoPlayON, songs[currentSong].isPlaying(), currentSong, songs[currentSong].position(), songs[currentSong].length());
   //
   if ( autoPlayON==true ) autoPlayMusic();
   //
