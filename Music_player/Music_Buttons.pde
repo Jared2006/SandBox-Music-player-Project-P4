@@ -185,7 +185,7 @@ void yeetus() {
   //Loop the Song Infinitely
   //Students to Develop
   rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
-  //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
+ //ellipse( loopIX, loopIY, loop1WidthDiameter, loop1HeightDiameter );
   //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
   //triangle( loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3 );
   //
