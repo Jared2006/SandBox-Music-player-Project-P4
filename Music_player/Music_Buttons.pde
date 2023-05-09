@@ -125,6 +125,10 @@ void car() {
   loop1WidthDiameter = ( buttonPositionColum*buttonReferentMeasure )*0.5;
   loop1HeightDiameter =( buttonPositionRow*buttonReferentMeasure )*0.7; 
   //
+  loop1X = pauseX1 + ( buttonPositionColum*buttonReferentMeasure )*1.5;
+  loop1Y = pauseY1 + ( buttonPositionColum*buttonReferentMeasure )*00.1;
+  loop1WidthDiameter = ( buttonPositionColum*buttonReferentMeasure )*0.5;
+  loop1HeightDiameter =( buttonPositionRow*buttonReferentMeasure )*0.7; 
 } //End setup
 //
 void yeetus() {
@@ -185,7 +189,7 @@ void yeetus() {
   //Loop the Song Infinitely
   //Students to Develop
   rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
- //ellipse( loopIX, loopIY, loop1WidthDiameter, loop1HeightDiameter );
+  ellipse( loopIX, loopIY, loop1WidthDiameter, loop1HeightDiameter );
   //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
   //triangle( loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3 );
   //
