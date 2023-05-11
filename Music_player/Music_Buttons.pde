@@ -16,14 +16,7 @@ float nextX1, nextY1, nextX2, nextY2, nextX3, nextY3, nextXR2, nextYR2, nextWidt
 float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistWidthDiameter, loopPlaylistHeightDiameter, loopPlaylistX1, loopPlaylistY1, loopPlaylistX2, loopPlaylistY2, loopPlaylistX3, loopPlaylistY3,loopPlaylistX, loopPlaylistY;
-float loop1WidthDiameter, loop1HeightDiameter,loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3;
-
-//
-void car() {
-  //Display
-  //fullScreen(); //displayWidth, displayHeight
-  //
-  //Population: visual data (hint, notes will lead to FOR or WHILE Loops to populate)
+float loop1WidthDiameter, loop1HeightDiameter,loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3; to populate)
   buttonReferentMeasure = width * 1/18;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/8;
@@ -125,10 +118,6 @@ void car() {
   loop1WidthDiameter = ( buttonPositionColum*buttonReferentMeasure )*0.5;
   loop1HeightDiameter =( buttonPositionRow*buttonReferentMeasure )*0.7; 
   //
-  loop1X = pauseX1 + ( buttonPositionColum*buttonReferentMeasure )*1.5;
-  loop1Y = pauseY1 + ( buttonPositionColum*buttonReferentMeasure )*00.1;
-  loop1WidthDiameter = ( buttonPositionColum*buttonReferentMeasure )*0.5;
-  loop1HeightDiameter =( buttonPositionRow*buttonReferentMeasure )*0.7; 
 } //End setup
 //
 void yeetus() {
@@ -189,7 +178,7 @@ void yeetus() {
   //Loop the Song Infinitely
   //Students to Develop
   rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
-  ellipse( loopIX, loopIY, loop1WidthDiameter, loop1HeightDiameter );
+  //ellipse( loopIX, loopIY, loop1WidthDiameter, loop1HeightDiameter );
   //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
   //triangle( loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3 );
   //
